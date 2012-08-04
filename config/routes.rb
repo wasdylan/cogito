@@ -1,5 +1,7 @@
 Higherthought::Application.routes.draw do
 
+  resources :relationships
+
   get "feedback/index"
 
   resources :posts do
