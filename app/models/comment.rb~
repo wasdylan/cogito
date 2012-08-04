@@ -1,0 +1,11 @@
+class Comment < ActiveRecord::Base
+  attr_accessible :comment
+  
+  belongs_to :user
+  belongs_to :post
+
+	fires :new_comment, :on                 => :create,
+                  		:actor              => :user,
+											:subject						=> self,
+											:secondary_subject	=> :post
+end

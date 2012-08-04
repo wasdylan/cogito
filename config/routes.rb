@@ -11,9 +11,6 @@ Higherthought::Application.routes.draw do
 
   resources :posts
 
-	resources :users do
-    resources :relationships
-  end
 
   match 'user/:id' => 'users#profile'
 
@@ -22,7 +19,10 @@ Higherthought::Application.routes.draw do
   end
   root :to => "home#index"
   devise_for :users
-  resources :users, :only => [:show, :index]
+
+  resources :users, :only => [:show, :index] do
+		resources :relationships
+	end
 
 
 end

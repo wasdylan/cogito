@@ -1,5 +1,7 @@
 Higherthought::Application.routes.draw do
 
+  get "home/stream"
+
   get "feedback/index"
 
   resources :posts do
