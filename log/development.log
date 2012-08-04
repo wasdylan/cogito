@@ -4392,3 +4392,928 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-04 09:51:57 -0400
 Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "agrees" WHERE "agrees"."post_id" = 3
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAgree Exists (0.2ms)[0m  SELECT 1 AS one FROM "agrees" WHERE "agrees"."post_id" = 3 AND "agrees"."user_id" = 3 LIMIT 1
+  [1m[36mAgree Load (0.2ms)[0m  [1mSELECT "agrees".* FROM "agrees" WHERE "agrees"."post_id" = 3 AND "agrees"."user_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = 3[0m
+  [1m[35mAgree Load (0.2ms)[0m  SELECT "agrees".* FROM "agrees" WHERE "agrees"."post_id" = 3
+  Rendered posts/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/agrees.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /agrees.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedback.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /posts.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:57 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/agrees.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /agrees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedback.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-04 09:53:58 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2012-08-04 09:58:34 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered posts/_form.html.erb (49.9ms)
+  Rendered posts/edit.html.erb within layouts/application (59.7ms)
+Compiled bootstrap-wysihtml5.css  (0ms)  (pid 6062)
+Compiled application.css  (46ms)  (pid 6062)
+Completed 500 Internal Server Error in 474ms
+
+ActionView::Template::Error (wrong number of arguments (4 for 1)
+  (in /home/dylan/higherthought/app/assets/javascripts/application.js:17)):
+    8:     <meta name="description" content="">
+    9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    "application", :media => "all" %>
+    11:     <%= javascript_include_tag "application" %>
+    12:     <%= csrf_meta_tags %>
+    13:     <%= yield(:head) %>
+    14:   </head>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3191360542685029290_34481040'
+
+
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2012-08-04 10:00:43 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/_form.html.erb (4.8ms)
+  Rendered posts/edit.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 114ms
+
+ActionView::Template::Error (couldn't find file 'bootstrap-button'
+  (in /home/dylan/higherthought/app/assets/javascripts/application.js:16)):
+    8:     <meta name="description" content="">
+    9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    "application", :media => "all" %>
+    11:     <%= javascript_include_tag "application" %>
+    12:     <%= csrf_meta_tags %>
+    13:     <%= yield(:head) %>
+    14:   </head>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3191360542685029290_34481040'
+
+
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2012-08-04 10:02:13 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered posts/_form.html.erb (4.9ms)
+  Rendered posts/edit.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 233ms
+
+ActionView::Template::Error (SyntaxError: reserved word "with" on line 8
+  (in /home/dylan/higherthought/app/assets/javascripts/bootstrap-button.js.coffee)):
+    8:     <meta name="description" content="">
+    9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    "application", :media => "all" %>
+    11:     <%= javascript_include_tag "application" %>
+    12:     <%= csrf_meta_tags %>
+    13:     <%= yield(:head) %>
+    14:   </head>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3191360542685029290_34481040'
+
+
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2012-08-04 10:05:17 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/_form.html.erb (4.6ms)
+  Rendered posts/edit.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 107ms
+
+ActionView::Template::Error (SyntaxError: reserved word "function" on line 22
+  (in /home/dylan/higherthought/app/assets/javascripts/bootstrap-button.js.coffee)):
+    8:     <meta name="description" content="">
+    9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    "application", :media => "all" %>
+    11:     <%= javascript_include_tag "application" %>
+    12:     <%= csrf_meta_tags %>
+    13:     <%= yield(:head) %>
+    14:   </head>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3191360542685029290_34481040'
+
+
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2012-08-04 10:05:19 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered posts/_form.html.erb (4.0ms)
+  Rendered posts/edit.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 98ms
+
+ActionView::Template::Error (SyntaxError: reserved word "function" on line 22
+  (in /home/dylan/higherthought/app/assets/javascripts/bootstrap-button.js.coffee)):
+    8:     <meta name="description" content="">
+    9:     <meta name="author" content="">
+    10:     <%= stylesheet_link_tag    "application", :media => "all" %>
+    11:     <%= javascript_include_tag "application" %>
+    12:     <%= csrf_meta_tags %>
+    13:     <%= yield(:head) %>
+    14:   </head>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3191360542685029290_34481040'
+
+
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/dylan/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2012-08-04 10:06:47 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/_form.html.erb (3.5ms)
+  Rendered posts/edit.html.erb within layouts/application (4.8ms)
+Compiled bootstrap-button.js  (0ms)  (pid 6062)
+Compiled wysihtml5.js  (2ms)  (pid 6062)
+Compiled bootstrap-wysihtml5.js  (0ms)  (pid 6062)
+Compiled application.js  (32ms)  (pid 6062)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (75.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 271ms (Views: 269.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /application.css - 200 OK (81ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /comments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/feedback.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /feedback.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/agrees.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /agrees.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /post.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /posts.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5.css?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /bootstrap-wysihtml5.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /bootstrap-button.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/agrees.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /agrees.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /comments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/feedback.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /feedback.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /post.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /posts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/wysihtml5.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /wysihtml5.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap-wysihtml5.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /bootstrap-wysihtml5.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-04 10:06:48 -0400
+Served asset /application.js - 200 OK (109ms)
+
+
+Started PUT "/posts/3" for 127.0.0.1 at 2012-08-04 10:07:23 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wWJwK7YJzt5nJSJ5Uhmfx67zwG68sgZ1XFwgEjvEPVE=", "post"=>{"title"=>"On Religion's Place in the 2012 Elections", "content"=>"2012′s presidential election has, for the umpteenth time, sparked a national debate on religion. In the past, this debate has focused ultimately on which religion is best fit for the presidency. Recently, however, it seems a bit of common sense has found its way into the American people and, thank God, the debate is finally putting significant focus into whether religion should even matter. With Romney’s ill-perceived Mormon faith and Obama’s still uneasy grounds after accusations of being Muslim (those dern rednecks), I doubt either candidate will speak much of the issue in their campaigns. But, despite their probable silence and despite this recent questioning of its place in politics, religion will still carry defining weight in 2012′s election.<br>But it shouldn’t. Here’s why.<br>Those who support religion’s role in politics argue that a candidate’s religion will define his actions. They say he will lead under the authority of his religion and that his executive actions will not deviate from that religion. If a president were Muslim, they argue, his decisions would reflect Islamic beliefs as he would most certainly make those decisions in accordance with his faith. The same goes for a Christian president or, as relevant this year, a Mormon president. They argue that one’s religion will define his leadership and, consequentially, the nation. Therefore, it is in a nation’s best interest, they argue, that the nation elects a president who shares the same religion as the majority of that nation. This argument is flawed.<br>First, it must be recognized that – and this might offend some people – that the majority of those who claim a religion don’t actually practice that religion in their daily lives. Secondly, it must also be recognized that each religion is not only perceived and therefore taught differently by each housing of that religion but that it is also perceived and therefore acted upon differently by each practicing individual of that religion (pending, of course, that the “practicing individual” actually practices the religion). In Laymen’s terms, everyone interprets their religion differently and not everyone claiming a religion will practice the religion.<br>It is reasonable to assume, then, that if one’s religion is not be practiced in his daily life (which it typically is not), then his religion should not carry much weight in whether or not he wins an election. If it did, that’d be like a candidate winning votes for his preference to coffee instead of tea; a preference with little to no impact on his ability to perform in office. Pending he did actually practice his religion, one should judge him, not his religion, for what he practices likely isn’t to par with what stereotypes of his religion say he practices.<br>That’s all I have to say about that. Happy Easter aka second hangover morning of April everyone.", "tags"=>"religion,politics", "topic"=>"Election", "source"=>"http://takethefame.wordpress.com/2012/04/08/on-religions-place-in-2012s-election/"}, "_wysihtml5_mode"=>"1", "commit"=>"Update Post", "id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  UPDATE "posts" SET "content" = '2012′s presidential election has, for the umpteenth time, sparked a national debate on religion. In the past, this debate has focused ultimately on which religion is best fit for the presidency. Recently, however, it seems a bit of common sense has found its way into the American people and, thank God, the debate is finally putting significant focus into whether religion should even matter. With Romney’s ill-perceived Mormon faith and Obama’s still uneasy grounds after accusations of being Muslim (those dern rednecks), I doubt either candidate will speak much of the issue in their campaigns. But, despite their probable silence and despite this recent questioning of its place in politics, religion will still carry defining weight in 2012′s election.<br>But it shouldn’t. Here’s why.<br>Those who support religion’s role in politics argue that a candidate’s religion will define his actions. They say he will lead under the authority of his religion and that his executive actions will not deviate from that religion. If a president were Muslim, they argue, his decisions would reflect Islamic beliefs as he would most certainly make those decisions in accordance with his faith. The same goes for a Christian president or, as relevant this year, a Mormon president. They argue that one’s religion will define his leadership and, consequentially, the nation. Therefore, it is in a nation’s best interest, they argue, that the nation elects a president who shares the same religion as the majority of that nation. This argument is flawed.<br>First, it must be recognized that – and this might offend some people – that the majority of those who claim a religion don’t actually practice that religion in their daily lives. Secondly, it must also be recognized that each religion is not only perceived and therefore taught differently by each housing of that religion but that it is also perceived and therefore acted upon differently by each practicing individual of that religion (pending, of course, that the “practicing individual” actually practices the religion). In Laymen’s terms, everyone interprets their religion differently and not everyone claiming a religion will practice the religion.<br>It is reasonable to assume, then, that if one’s religion is not be practiced in his daily life (which it typically is not), then his religion should not carry much weight in whether or not he wins an election. If it did, that’d be like a candidate winning votes for his preference to coffee instead of tea; a preference with little to no impact on his ability to perform in office. Pending he did actually practice his religion, one should judge him, not his religion, for what he practices likely isn’t to par with what stereotypes of his religion say he practices.<br>That’s all I have to say about that. Happy Easter aka second hangover morning of April everyone.', "updated_at" = '2012-08-04 14:07:23.756645' WHERE "posts"."id" = 3
+  [1m[36m (127.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 189ms (ActiveRecord: 127.9ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2012-08-04 10:07:23 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "agrees" WHERE "agrees"."post_id" = 3[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAgree Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "agrees" WHERE "agrees"."post_id" = 3 AND "agrees"."user_id" = 3 LIMIT 1[0m
+  [1m[35mAgree Load (0.2ms)[0m  SELECT "agrees".* FROM "agrees" WHERE "agrees"."post_id" = 3 AND "agrees"."user_id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = 3
+  [1m[36mAgree Load (0.2ms)[0m  [1mSELECT "agrees".* FROM "agrees" WHERE "agrees"."post_id" = 3[0m
+  Rendered posts/show.html.erb within layouts/application (110.8ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 299ms (Views: 183.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/agrees.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /agrees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/feedback.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /post.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedback.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /feedback.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/agrees.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /agrees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:24 -0400
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered posts/_form.html.erb (8.6ms)
+  Rendered posts/edit.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/agrees.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /agrees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/feedback.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /comments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /home.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /post.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/agrees.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /agrees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedback.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:31 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started PUT "/posts/3" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wWJwK7YJzt5nJSJ5Uhmfx67zwG68sgZ1XFwgEjvEPVE=", "post"=>{"title"=>"On Religion's Place in the 2012 Elections", "content"=>"2012′s presidential election has, for the umpteenth time, sparked a national debate on religion. In the past, this debate has focused ultimately on which religion is best fit for the presidency. Recently, however, it seems a bit of common sense has found its way into the American people and, thank God, the debate is finally putting significant focus into whether religion should even matter. With Romney’s ill-perceived Mormon faith and Obama’s still uneasy grounds after accusations of being Muslim (those dern rednecks), I doubt either candidate will speak much of the issue in their campaigns. But, despite their probable silence and despite this recent questioning of its place in politics, religion will still carry defining weight in 2012′s election.<br><br>But it shouldn’t. Here’s why.<br><br>Those who support religion’s role in politics argue that a candidate’s religion will define his actions. They say he will lead under the authority of his religion and that his executive actions will not deviate from that religion. If a president were Muslim, they argue, his decisions would reflect Islamic beliefs as he would most certainly make those decisions in accordance with his faith. The same goes for a Christian president or, as relevant this year, a Mormon president. They argue that one’s religion will define his leadership and, consequentially, the nation. Therefore, it is in a nation’s best interest, they argue, that the nation elects a president who shares the same religion as the majority of that nation. This argument is flawed.<br><br>First, it must be recognized that – and this might offend some people – that the majority of those who claim a religion don’t actually practice that religion in their daily lives. Secondly, it must also be recognized that each religion is not only perceived and therefore taught differently by each housing of that religion but that it is also perceived and therefore acted upon differently by each practicing individual of that religion (pending, of course, that the “practicing individual” actually practices the religion). In Laymen’s terms, everyone interprets their religion differently and not everyone claiming a religion will practice the religion.<br>It is reasonable to assume, then, that if one’s religion is not be practiced in his daily life (which it typically is not), then his religion should not carry much weight in whether or not he wins an election. If it did, that’d be like a candidate winning votes for his preference to coffee instead of tea; a preference with little to no impact on his ability to perform in office. Pending he did actually practice his religion, one should judge him, not his religion, for what he practices likely isn’t to par with what stereotypes of his religion say he practices.<br><br>That’s all I have to say about that. Happy Easter aka second hangover morning of April everyone.", "tags"=>"religion,politics", "topic"=>"Election", "source"=>"http://takethefame.wordpress.com/2012/04/08/on-religions-place-in-2012s-election/"}, "_wysihtml5_mode"=>"1", "commit"=>"Update Post", "id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "posts" SET "content" = '2012′s presidential election has, for the umpteenth time, sparked a national debate on religion. In the past, this debate has focused ultimately on which religion is best fit for the presidency. Recently, however, it seems a bit of common sense has found its way into the American people and, thank God, the debate is finally putting significant focus into whether religion should even matter. With Romney’s ill-perceived Mormon faith and Obama’s still uneasy grounds after accusations of being Muslim (those dern rednecks), I doubt either candidate will speak much of the issue in their campaigns. But, despite their probable silence and despite this recent questioning of its place in politics, religion will still carry defining weight in 2012′s election.<br><br>But it shouldn’t. Here’s why.<br><br>Those who support religion’s role in politics argue that a candidate’s religion will define his actions. They say he will lead under the authority of his religion and that his executive actions will not deviate from that religion. If a president were Muslim, they argue, his decisions would reflect Islamic beliefs as he would most certainly make those decisions in accordance with his faith. The same goes for a Christian president or, as relevant this year, a Mormon president. They argue that one’s religion will define his leadership and, consequentially, the nation. Therefore, it is in a nation’s best interest, they argue, that the nation elects a president who shares the same religion as the majority of that nation. This argument is flawed.<br><br>First, it must be recognized that – and this might offend some people – that the majority of those who claim a religion don’t actually practice that religion in their daily lives. Secondly, it must also be recognized that each religion is not only perceived and therefore taught differently by each housing of that religion but that it is also perceived and therefore acted upon differently by each practicing individual of that religion (pending, of course, that the “practicing individual” actually practices the religion). In Laymen’s terms, everyone interprets their religion differently and not everyone claiming a religion will practice the religion.<br>It is reasonable to assume, then, that if one’s religion is not be practiced in his daily life (which it typically is not), then his religion should not carry much weight in whether or not he wins an election. If it did, that’d be like a candidate winning votes for his preference to coffee instead of tea; a preference with little to no impact on his ability to perform in office. Pending he did actually practice his religion, one should judge him, not his religion, for what he practices likely isn’t to par with what stereotypes of his religion say he practices.<br><br>That’s all I have to say about that. Happy Easter aka second hangover morning of April everyone.', "updated_at" = '2012-08-04 14:07:51.110902' WHERE "posts"."id" = 3
+  [1m[36m (150.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 156ms (ActiveRecord: 151.3ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "agrees" WHERE "agrees"."post_id" = 3[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mAgree Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "agrees" WHERE "agrees"."post_id" = 3 AND "agrees"."user_id" = 3 LIMIT 1[0m
+  [1m[35mAgree Load (0.1ms)[0m  SELECT "agrees".* FROM "agrees" WHERE "agrees"."post_id" = 3 AND "agrees"."user_id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = 3
+  [1m[36mAgree Load (0.2ms)[0m  [1mSELECT "agrees".* FROM "agrees" WHERE "agrees"."post_id" = 3[0m
+  Rendered posts/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 95ms (Views: 89.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/agrees.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /agrees.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/feedback.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/post.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /post.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/agrees.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /agrees.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /comments.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/feedback.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /post.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-04 10:07:51 -0400
+Served asset /application.js - 304 Not Modified (8ms)
