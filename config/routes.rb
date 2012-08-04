@@ -1,4 +1,8 @@
 Higherthought::Application.routes.draw do
+  resources :comments
+
+  resources :agrees
+
   resources :posts
 
   authenticated :user do

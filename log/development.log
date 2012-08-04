@@ -338,3 +338,61 @@ Migrating to CreatePosts (20120804011218)
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_list("users_roles")
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_roles_on_user_id_and_role_id')[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120804001508)
+Migrating to RolifyCreateRoles (20120804001519)
+Migrating to AddNameToUsers (20120804001524)
+Migrating to AddUsernameToUsers (20120804002827)
+Migrating to AddFullnameToUsers (20120804002931)
+Migrating to AddBioToUsers (20120804002950)
+Migrating to CreatePosts (20120804011218)
+Migrating to CreateAgrees (20120804014527)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "agrees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120804014527')[0m
+  [1m[35m (103.6ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("agrees")[0m
+  [1m[35m (0.4ms)[0m  PRAGMA index_list("posts")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("roles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_roles_on_name_and_resource_type_and_resource_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_roles_on_name')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users_roles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_roles_on_user_id_and_role_id')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120804001508)
+Migrating to RolifyCreateRoles (20120804001519)
+Migrating to AddNameToUsers (20120804001524)
+Migrating to AddUsernameToUsers (20120804002827)
+Migrating to AddFullnameToUsers (20120804002931)
+Migrating to AddBioToUsers (20120804002950)
+Migrating to CreatePosts (20120804011218)
+Migrating to CreateAgrees (20120804014527)
+Migrating to CreateComments (20120804014729)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "comment" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120804014729')[0m
+  [1m[35m (115.9ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("agrees")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("comments")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("posts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("roles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_roles_on_name_and_resource_type_and_resource_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_roles_on_name')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users_roles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_roles_on_user_id_and_role_id')[0m

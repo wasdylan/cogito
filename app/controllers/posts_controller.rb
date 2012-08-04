@@ -14,10 +14,20 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
+    @comments = Comment.where(:post_id => @post.id)
+    @agrees = Agree.where(:post_id => @post.id)
+    @agree_count = @agrees.count
+    if @agree_count == 1
+    	@peoplev = "person agrees"
+    else
+    	@peoplev = "people agree"
+    end
+    @agreed = Agree.exists?(:post_id => @post.id, :user_id => current_user)
+    @agreement = Agree.find_by_post_id_and_user_id(@post.id, current_user)
+    
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @post }
+      format.json { render :json => @post }
     end
   end
 

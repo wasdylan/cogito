@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @agree.user_id %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%= @agree.post_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_agree_path(@agree) %> |
+<%= link_to 'Back', agrees_path %>
