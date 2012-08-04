@@ -1,4 +1,4 @@
-Higherthought::Application.routes.draw do
+Higherthought::Application.routes.draw do=
 
   resources :posts do
     resources :comments

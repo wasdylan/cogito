@@ -1,3 +1,6 @@
 class Agree < ActiveRecord::Base
-  attr_accessible :post_id, :user_id
+  attr_accessible
+  
+  belongs_to :user
+  belongs_to :post
 end
