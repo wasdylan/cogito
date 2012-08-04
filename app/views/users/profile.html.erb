@@ -6,6 +6,15 @@
 <p><%= @user.bio %></p>
 </div>
 
+<% if @isfollowing.equal?(false) %>
+	<%= form_for([@user, @user.relationships.new]) do |f| %>
+	<button type="submit" class="btn pull-right">Follow</button>
+	<% end %>
+<% else %>
+	<%= form_for([@user, @relationship], :method => :delete) do |f| %>
+	<button type="submit" class="agreed btn btn-inverse pull-right" onmouseover="change_btn();" onmouseout="change_back();"> Unfollow</button>
+	<% end %>
+<% end %>
 
 <div class="row">
 <div class="span3">
@@ -13,8 +22,8 @@
    <ul class="nav nav-tabs pull-right" style="margin:0px;">
     <li class="active"><a href="#articles" data-toggle="tab">Articles</a></li>
     <li><a href="#activity" data-toggle="tab">Activity</a></li>
-    <li><a href="#followers" data-toggle="tab">Followers</a></li>
-    <li><a href="#following" data-toggle="tab">Following</a></li>
+    <li><a href="#followers" data-toggle="tab">Followers <span class="badge badge-info"><%= @followers_count %></span></a></li>
+    <li><a href="#following" data-toggle="tab">Following <span class="badge badge-info"><%= @following_count %></span></a></li>
   </ul>
 </div>
 </div>

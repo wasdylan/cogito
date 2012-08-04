@@ -16,10 +16,10 @@ class AgreesController < ApplicationController
   end
  
   def destroy
-    @relationship = relationship.find(params[:id])
-    @relationship.destroy
+    @agree = Agree.find(params[:id])
+    @agree.destroy
  
-    redirect_to(@relationship.post)
+    redirect_to(@agree.post)
   end
 
 end

@@ -10,6 +10,14 @@ class UsersController < ApplicationController
 	  @activities = (@posts + @comments + @agrees).sort_by(&:created_at) # combine user's activities and sort them for the stream
 	  @activites = @activities.reverse!
 	  @posts = @posts.reverse!
+
+		@following = Relationship.where(:follower_id => @user.id)
+    @following_count = @following.count
+		@followers = Relationship.where(:followed_id => @user.id)
+    @followers_count = @followers.count
+
+    @isfollowing = Relationship.exists?(:followed_id => @user.id, :follower_id => current_user)
+    @relationship = Relationship.find_by_followed_id_and_follower_id(@user.id, current_user)
 	  	  
 	  respond_to do |format|
       	format.html # profile.html.erb

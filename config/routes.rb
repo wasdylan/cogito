@@ -1,7 +1,5 @@
 Higherthought::Application.routes.draw do
 
-  resources :relationships
-
   get "feedback/index"
 
   resources :posts do
@@ -10,6 +8,10 @@ Higherthought::Application.routes.draw do
   end
 
   resources :posts
+
+	resources :users do
+    resources :relationships
+  end
 
   match 'user/:id' => 'users#profile'
 
