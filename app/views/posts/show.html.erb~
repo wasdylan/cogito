@@ -38,7 +38,7 @@ function change_back(){
 
 
 <%= form_for([@post, @post.comments.new]) do |f| %>
-<%= f.text_area :comment, :style => "height:75px;", :class => "span8" %>
+<%= f.text_area :comment, :style => "height:75px;", :class => "span7" %>
 <div style="text-align:right;">
 <%= f.submit "Comment", :class => "btn" %>
 </div>

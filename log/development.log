@@ -20342,3 +20342,4 @@ Served asset /wysihtml5.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-04 11:25:08 -0400
 Served asset /application.js - 304 Not Modified (67ms)
+Connecting to database specified by database.yml

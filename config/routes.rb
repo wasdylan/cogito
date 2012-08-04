@@ -1,5 +1,7 @@
 Higherthought::Application.routes.draw do
 
+  get "home/stream"
+
   get "feedback/index"
 
   resources :posts do
@@ -16,7 +18,7 @@ Higherthought::Application.routes.draw do
   match 'user/:id' => 'users#profile'
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'home#stream'
   end
   root :to => "home#index"
   devise_for :users

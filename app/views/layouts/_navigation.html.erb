@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <%= link_to("Higherthought", root_path, :class => "brand") %>
+      <%= link_to("cogito", root_path, :class => "brand") %>
       
       
       <% if user_signed_in? %>
@@ -33,7 +33,7 @@
       
       
       <div class="nav-collapse">
-        <ul class="nav">
+        <ul class="nav pull-right">
           <li><%= link_to('Articles', posts_path) %></li>
           <% if user_signed_in? %>
           <li><a href="">Bookmarked</a></li>

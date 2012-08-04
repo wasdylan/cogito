@@ -4,6 +4,6 @@ class HomeController < ApplicationController
   end
 
 	def stream
-
+		
 	end
 end
