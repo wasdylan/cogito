@@ -1,22 +1,55 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="row">
+<div class="span12">
+<h1>Edit your account</h1><hr>
+</div>
+</div>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
-    <%= f.input :password_confirmation, :required => false %>
-    <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
-  </div>
+<div class="row">
+<div class="span6 well offset3">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-vertical" }) do |f| %>
+  <%= devise_error_messages! %>
+<div class="row">
+<div class="span3">
+  <label><%= f.label :email %><label>
+  <%= f.email_field :email, :class => "input-xlarge"  %>
+  
+  <label><%= f.label :username %><label>
+  <%= f.text_field :username, :class => "input-xlarge"  %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
+  <label>New password (<i>leave blank to not change</i>) </label> 
+  <%= f.password_field :password, :autocomplete => "off", :class => "input-xlarge" %>
+
+  <label><%= f.label :password_confirmation %><label>
+  <%= f.password_field :password_confirmation, :class => "input-xlarge" %>
+
+</div>
+<div class="span3">
+  <label><%= f.label :fullname %></label>
+  <%= f.text_field :fullname, :class => "span3" %>
+  
+  <label><%= f.label :bio %></label>
+  <%= f.text_area :bio, :style => "height:100px;", :class => "span3" %>
+</div>
+</div>
+
+<div class="row">
+<div class="span6 form-inline" style="text-align:right;">
+<hr>
+  <label>Current password (<i>needed to verify changes</i>)</label>
+  <%= f.password_field :current_password  %><br><br>
+  <p style="margin-bottom:-10px;">
+  <%= f.submit "Update", :class => "btn btn-primary" %>
+  </p>
 <% end %>
+</div>
+</div>
+</div>
+</div>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
-
-<%= link_to "Back", :back %>
+<div class="row">
+<div class="span6 offset3">
+<p><i class="icon-trash"></i> Not happy? <%= link_to "Cancel your account", registration_path(resource_name), :data => { :confirm => "Are you sure? This cannot be undone and ALL of your data will be destroyed." }, :method => :delete %>.</p>
+<p><i class="icon-eye-open"></i> <%= link_to("Go to your public profile", "/user/"+current_user.username) %>.</p>
+</div>
+</div>
