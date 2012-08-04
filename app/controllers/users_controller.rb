@@ -25,5 +25,12 @@ class UsersController < ApplicationController
       end
     
   end
+
+	def show
+		@id = params[:id]
+		@user = User.find_by_id(@id)	
+		@url = "../user/"+@user.username
+		redirect_to(@url = "/user/"+@user.username)
+	end
   
 end

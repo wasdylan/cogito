@@ -11,13 +11,13 @@ class UsersController < ApplicationController
 	  @activites = @activities.reverse!
 	  @posts = @posts.reverse!
 
-		@following = relationship.where(:follower_id => @user.id)
+		@following = Relationship.where(:follower_id => @user.id)
     @following_count = @following.count
-		@followers = relationship.where(:followed_id => @user.id)
+		@followers = Relationship.where(:followed_id => @user.id)
     @followers_count = @followers.count
 
-    @isfollowing = relationship.exists?(:followed_id => @user.id, :follower_id => current_user)
-    @relationship = relationship.find_by_followed_id_and_follower_id(@user.id, current_user)
+    @isfollowing = Relationship.exists?(:followed_id => @user.id, :follower_id => current_user)
+    @relationship = Relationship.find_by_followed_id_and_follower_id(@user.id, current_user)
 	  	  
 	  respond_to do |format|
       	format.html # profile.html.erb
@@ -25,5 +25,12 @@ class UsersController < ApplicationController
       end
     
   end
+
+	def show
+		@id = params[:id]
+		@user = User.find_by_id(@id)	
+		@url = "../user/"+@user.username
+		redirect_to(@url = "../user/"+@user.username)
+	end
   
 end
