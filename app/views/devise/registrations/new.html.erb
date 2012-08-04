@@ -1,17 +1,67 @@
-<h2>Sign up</h2>
+<div class="row">
+<div class="span12">
+<h1>Become a spectator</h1><hr>
+</div>
+</div>
 
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="row">
+<div class="span4">
+<h5><i class="icon-thumbs-up"></i> Agree</h5>
+<p>Agreeing with an article is the most effective way to let the writer know "I feel you bro, I'm one 100% behind you."</p>
+</div>
+<div class="span4">
+<h5><i class="icon-comment"></i> Discuss</h5>
+<p>Just because you don't have a writer's account doesn't mean you can't share your opinion. Being a spectator lets you comment on any Politz article.</p>
+</div>
+<div class="span4">
+<h5><i class="icon-tags"></i> Stay posted</h5>
+<p>Follow prompts and tags to keep updated on certain topics and current events.</p>
+</div>
+<div class="span12">
+<hr>
+</div>
+</div>
 
-  <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :password, :required => true %>
-    <%= f.input :password_confirmation, :required => true %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
+<div class="row">
+<div class="span6 offset3 well">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => "form-vertical"}) do |f| %>
+  <%= devise_error_messages! %>
+<div class="row">
+<div class="span3">
+  <label><%= f.label :email %></label>
+  <%= f.email_field :email, :class => "span3" %>
+  
+  <label><%= f.label :username %></label>
+  <%= f.text_field :username, :class => "span3" %>
+
+  <label><%= f.label :password %></label>
+  <%= f.password_field :password, :class => "span3" %>
+
+  <label><%= f.label :password_confirmation %></label>
+  <%= f.password_field :password_confirmation, :class => "span3" %>
+</div>
+<div class="span3">
+  <label><%= f.label :fullname %></label>
+  <%= f.text_field :fullname, :class => "span3" %>
+  
+  
+  <label><%= f.label :bio %></label>
+  <%= f.text_area :bio, :style => "height:100px;", :class => "span3" %>
+</div>
+</div>
+
+<div class="row">
+<div class="span6">
+ <%= f.submit "Sign up", :class => "btn btn-primary" %>
+
 <% end %>
+<hr>
+<p><%= render "devise/shared/links" %></p>
+</div>
+</div>
 
-<%= render "devise/shared/links" %>
+
+
+</div>
+</div>
