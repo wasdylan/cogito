@@ -39,10 +39,8 @@
           <% if user_signed_in? %>
           <li><a href="">Favorites</a></li>
           <li class="divider"></li>
-          <% if can? :create, @post %>
           <li><%= link_to('Write', new_post_path) %> </li>
           <li><a href="">Feedback</a></li>
-          <% end %>
           <% end %>
         </ul>
       </div><!--/.nav-collapse -->
