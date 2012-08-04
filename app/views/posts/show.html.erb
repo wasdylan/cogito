@@ -1,0 +1,88 @@
+<script>
+function change_btn(){
+	$('.agreed').removeClass("btn-inverse");
+	$('.agreed').addClass("btn-danger");
+	$('.agreed').html("<i class='icon-minus icon-white'></i> Retract");
+}
+function change_back(){
+	$('.agreed').removeClass("btn-danger");
+	$('.agreed').addClass("btn-inverse");
+	$('.agreed').html("<i class='icon-thumbs-up icon-white'></i> Agreed");
+}
+</script>
+<div class="row">
+<div class="span8">
+
+
+<div class="row">
+<div class="span8">
+<h1><a href="/posts/<%= @post.id %>"><%= @post.title %></a></h1>
+<hr>
+<p><%= @post.content.html_safe %></p>
+<hr>
+<p>
+<small>BY</small> <%= link_to(@post.user.fullname, "/user/"+@post.user.username) %>
+<small>PUBLISHED</small> <%= (@post.created_at).to_formatted_s(:long) %>
+<small>TOPIC</small> <%= @post.topic %> 
+<small>SOURCE</small> <%= @post.source %>
+</p>
+<hr>
+</div>
+</div>
+
+<div class="row">
+<div class="span8">
+<% @comments.each do |comment| %>
+	<p>
+	<span class="label label-info"><%= comment.user.username %>:</span> <%= comment.comment %>
+	<span style="width:100%; text-align:right; display:block;"><%= time_ago_in_words(comment.created_at) %> ago</span>
+	</p>
+<hr>
+<% end %>
+
+
+<%= form_for([@post, @post.comments.new]) do |f| %>
+<%= f.text_area :comment, :style => "height:75px;", :class => "span8" %>
+<div style="text-align:right;">
+<%= f.submit "Comment", :class => "btn" %>
+</div>
+<% end %>
+
+</div>
+</div>
+
+</div>
+<div class="span4">
+<h1>Consensus</h1>
+<hr>
+
+<div class="row">
+<div class="span4">
+<div class="pull-left">
+<p style="margin-top:5px;"><span class="badge badge-info"><%= @agree_count %></span> <%= @peoplev %> with this</p>
+</div>
+<% if @agreed.equal?(false) %>
+	<%= form_for([@post, @post.agrees.new]) do |f| %>
+	<button type="submit" class="btn pull-right"><i class="icon-thumbs-up"></i> Agree</button>
+	<% end %>
+<% else %>
+	<%= form_for([@post, @agreement], :method => :delete) do |f| %>
+	<button type="submit" class="agreed btn btn-inverse pull-right" onmouseover="change_btn();" onmouseout="change_back();"><i class="icon-thumbs-up icon-white"></i> Agreed</button>
+	<% end %>
+<% end %>
+</div>
+</div>
+
+<div class="row">
+<div class="span4">
+<hr>
+<% @agrees.each do |agree| %>
+	<%= agree.user.username %>,
+<% end %>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>

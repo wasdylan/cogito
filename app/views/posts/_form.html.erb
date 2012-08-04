@@ -1,0 +1,26 @@
+<div class="row">
+<div class="span8">
+<hr>
+<%= form_for(@post) do |f| %>
+<fieldset>
+    <%= f.text_field :title, :placeholder => "Title", :class => "span8" %>
+    
+    <%= f.text_area :content, :id => "content", :class => "span8" %>
+    <script type="text/javascript">
+    $('#content').wysihtml5();
+    </script>
+    
+    <p align="right">
+    
+    <%= f.text_field :tags, :class => "input-inline", :placeholder => "tags" %>
+    
+    <%= f.text_field :topic, :class => "input-inline", :placeholder => "topic" %>
+  
+    <%= f.text_field :source, :class => "input-inline", :placeholder => "source" %><br>
+    <%= f.submit :class => "btn btn-primary"%>
+    
+    </p>
+</fieldset>
+<% end %>
+</div>
+</div>

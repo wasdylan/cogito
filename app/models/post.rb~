@@ -1,0 +1,3 @@
+class Post < ActiveRecord::Base
+  attr_accessible :content, :source, :tags, :title, :topic, :user_id
+end
