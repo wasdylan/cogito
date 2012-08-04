@@ -102,3 +102,213 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[36m (0.3ms)[0m  [1mINSERT INTO "users_roles" ("user_id", "role_id") VALUES (1, 1)[0m
   [1m[35m (71.6ms)[0m  commit transaction
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-03 20:26:47 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered home/index.html.erb within layouts/application (36.6ms)
+Compiled bootstrap_and_overrides.css  (1019ms)  (pid 8613)
+Compiled home.css  (1ms)  (pid 8613)
+Compiled users.css  (1ms)  (pid 8613)
+Compiled application.css  (1120ms)  (pid 8613)
+Compiled jquery.js  (62ms)  (pid 8613)
+Compiled jquery_ujs.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (52ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 8613)
+Compiled twitter/bootstrap.js  (202ms)  (pid 8613)
+Compiled bootstrap.js  (84ms)  (pid 8613)
+Compiled home.js  (0ms)  (pid 8613)
+Compiled users.js  (0ms)  (pid 8613)
+Compiled application.js  (462ms)  (pid 8613)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 1898ms (Views: 1793.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /application.css - 200 OK (64ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /bootstrap_and_overrides.css - 200 OK (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /home.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /users.css - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /twitter/bootstrap.js - 200 OK (16ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /bootstrap.js - 200 OK (4ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-03 20:26:50 -0400
+Served asset /application.js - 200 OK (20ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-08-03 20:27:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 34ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-08-03 20:27:02 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (449.5ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 466ms (Views: 464.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2012-08-03 20:27:06 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 78.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-03 20:27:09 -0400
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2012-08-03 20:27:10 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-03 20:27:10 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20120804001508)
+Migrating to RolifyCreateRoles (20120804001519)
+Migrating to AddNameToUsers (20120804001524)
+Migrating to AddUsernameToUsers (20120804002827)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "username" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120804002827')[0m
+  [1m[35m (147.2ms)[0m  commit transaction
+Migrating to AddFullnameToUsers (20120804002931)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "fullname" varchar(255)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120804002931')[0m
+  [1m[35m (106.1ms)[0m  commit transaction
+Migrating to AddBioToUsers (20120804002950)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "bio" text
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120804002950')[0m
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("roles")[0m
+  [1m[35m (0.5ms)[0m  PRAGMA index_info('index_roles_on_name_and_resource_type_and_resource_id')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_roles_on_name')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users_roles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_roles_on_user_id_and_role_id')
