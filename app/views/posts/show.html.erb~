@@ -11,33 +11,29 @@ function change_back(){
 }
 </script>
 <div class="row">
-<div class="span8">
-
-
-<div class="row">
-<div class="span8">
+<div class="span2">
 <h1><a href="/posts/<%= @post.id %>"><%= @post.title %></a></h1>
 <hr>
+<h5><small>AUTHOR</small> <%= link_to(@post.user.fullname, "/user/"+@post.user.username) %></h5>
+<h5><small>PUBLISHED</small> <a href=""><%= (@post.created_at).to_formatted_s(:long) %></a>
+</div>
+
+<div class="span7">
 <p><%= @post.content.html_safe %></p>
 <hr>
 <p>
-<small>BY</small> <%= link_to(@post.user.name, "/user/"+@post.user.username) %>
-<small>PUBLISHED</small> <%= (@post.created_at).to_formatted_s(:long) %>
 <small>TOPIC</small> <%= @post.topic %> 
 <small>SOURCE</small> <%= @post.source %>
 </p>
 <hr>
-</div>
-</div>
 
-<div class="row">
-<div class="span8">
+
 <% @comments.each do |comment| %>
 	<p>
 	<span class="label label-info"><%= comment.user.username %>:</span> <%= comment.comment %>
 	<span style="width:100%; text-align:right; display:block;"><%= time_ago_in_words(comment.created_at) %> ago</span>
 	</p>
-<hr>
+	<hr>
 <% end %>
 
 
@@ -49,15 +45,13 @@ function change_back(){
 <% end %>
 
 </div>
-</div>
 
-</div>
-<div class="span4">
+<div class="span3">
 <h1>Consensus</h1>
 <hr>
 
 <div class="row">
-<div class="span4">
+<div class="span3">
 <div class="pull-left">
 <p style="margin-top:5px;"><span class="badge badge-info"><%= @agree_count %></span> <%= @peoplev %> with this</p>
 </div>
@@ -74,7 +68,7 @@ function change_back(){
 </div>
 
 <div class="row">
-<div class="span4">
+<div class="span3">
 <hr>
 <% @agrees.each do |agree| %>
 	<%= agree.user.username %>,
