@@ -1,0 +1,37 @@
+<div class="row">
+<div class="span3">
+
+</div>
+
+<div class="span9">
+
+    	<h2>Feedback</h2><hr>
+		<% @feedbacks.each do |feedback| %>
+			<% if feedback.is_a? Comment %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-comment"></i> </div>
+				<div class="pull-left">
+					<a href="/user/<%= feedback.user.username %>">@<%= feedback.user.username %></a> commented on your article <a href="/posts/<%= feedback.post.id %>"><%= feedback.post.title %></a>
+					<blockquote><%= feedback.comment %></blockquote>
+				</div>
+				<div style="clear:both;"></div>
+			<% elsif feedback.is_a? Agree %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-thumbs-up"></i> </div>
+				<div class="pull-left">
+					<a href="/user/<%= feedback.user.username %>">@<%= feedback.user.username %></a> agreed with your article <a href="/posts/<%= feedback.post.id %>"><%= feedback.post.title %></a><p></p>
+				</div>
+				<div style="clear:both;"></div>
+			<% elsif feedback.is_a? Post %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-pencil"></i> </div>
+				<div class="pull-left">
+					<a href="/user/<%= feedback.user.username %>">@<%= feedback.user.username %></a> wrote <a href="/posts/<%= feedback.id %>"><%= feedback.title %></a><p></p>
+				</div>
+				<div style="clear:both;"></div>
+			<% end %>
+		<% end %>
+</div>
+
+
+
+
+</div>
+</div>

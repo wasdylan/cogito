@@ -397,3 +397,4 @@ Migrating to CreateComments (20120804014729)
   [1m[35m (0.0ms)[0m  PRAGMA index_list("users_roles")
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_roles_on_user_id_and_role_id')[0m
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml

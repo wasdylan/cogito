@@ -1,5 +1,7 @@
 Higherthought::Application.routes.draw do
 
+  match "feedback" => "feedback/index"
+
   resources :posts do
     resources :comments
     resources :agrees
@@ -7,7 +9,7 @@ Higherthought::Application.routes.draw do
 
   resources :posts
 
-  match 'user/:id' => 'user#profile'
+  match 'user/:id' => 'users#profile'
 
   authenticated :user do
     root :to => 'home#index'
