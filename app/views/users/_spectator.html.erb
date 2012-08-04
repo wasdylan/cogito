@@ -1,0 +1,81 @@
+<div class="row">
+<div class="span3">
+
+<div class="well">
+<h2><%= @user.name %></h2>
+<p><%= @user.bio %></p>
+
+<% if @user.website.equal?("") %>
+<% else %>
+<p><small>SITE</small> <a href="<%= @user.website %>"><%= @user.website %></a></p>
+<% end %>
+</div>
+
+
+<div class="row">
+<div class="span3">
+
+<% if @follow.equal?(false) %>
+	<%= form_for([@user, @user.relationships.new]) do |f| %>
+	<button type="submit" class="btn pull-right">Follow</button>
+	<% end %>
+<% else %>
+	<%= form_for([@user, @relationship], :method => :delete) do |f| %>
+	<button type="submit" class="agreed btn btn-inverse pull-right" onmouseover="change_btn();" onmouseout="change_back();"> Unfollow</button>
+	<% end %>
+<% end %>
+
+<div class="tabbable tabs-left pull-right">
+   <ul class="nav nav-tabs pull-right" style="margin:0px;">
+    <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
+    <li><a href="#followers" data-toggle="tab">Followers <span class="badge badge-info"><%= @user.followed_users.count %></span></a></li>
+    <li><a href="#following" data-toggle="tab">Following <span class="badge badge-info"><%= @user.followed_users.count %></span></a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="span9">
+
+
+<div class="tab-content">
+    <div class="tab-pane" id="followers">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+    <div class="tab-pane" id="following">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+    <div class="tab-pane active" id="activity">
+    	<h2>Recent Activity</h2><hr>
+		<% @activities.each do |activity| %>
+			<% if activity.is_a? Comment %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-comment"></i> </div>
+				<div class="pull-left">
+					commented on <a href="/user/<%= activity.post.user.username %>">@<%= activity.post.user.username %></a>'s article <a href="/posts/<%= activity.post.id %>"><%= activity.post.title %></a>
+					<blockquote><%= activity.comment %></blockquote>
+				</div>
+				<div style="clear:both;"></div>
+			<% elsif activity.is_a? Agree %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-thumbs-up"></i> </div>
+				<div class="pull-left">
+					agreed with <a href="/posts/<%= activity.post.id %>"><%= activity.post.title %></a><p></p>
+				</div>
+				<div style="clear:both;"></div>
+			<% elsif activity.is_a? Post %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-pencil"></i> </div>
+				<div class="pull-left">
+					wrote <a href="/posts/<%= activity.id %>"><%= activity.title %></a><p></p>
+				</div>
+				<div style="clear:both;"></div>
+			<% end %>
+		<% end %>
+    </div>
+</div>
+
+
+
+
+</div>
+</div>

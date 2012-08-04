@@ -1,0 +1,80 @@
+<div class="row">
+<div class="span3">
+
+<div class="well">
+<h2><%= @user.fullname %></h2>
+<p><%= @user.bio %></p>
+</div>
+
+
+<div class="row">
+<div class="span3">
+<div class="tabbable tabs-left pull-right">
+   <ul class="nav nav-tabs pull-right" style="margin:0px;">
+    <li class="active"><a href="#articles" data-toggle="tab">Articles</a></li>
+    <li><a href="#activity" data-toggle="tab">Activity</a></li>
+    <li><a href="#followers" data-toggle="tab">Followers</a></li>
+    <li><a href="#following" data-toggle="tab">Following</a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="span9">
+
+
+<div class="tab-content">
+    <div class="tab-pane active" id="articles">
+    	<% @posts.each do |post| %>
+			<h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
+			<p><%= post.content.html_safe %></p>
+			<p>
+			<small>TOPIC</small> <%= post.topic %> 
+			<% if post.source.equal?("") %>
+			<% else %>
+				<small>SOURCE</small> <%= post.source %>
+			<% end %>
+			</p>
+			<hr>
+		<% end %>
+    </div>
+    <div class="tab-pane" id="followers">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+    <div class="tab-pane" id="following">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+    <div class="tab-pane" id="activity">
+    	<h2>Recent Activity</h2><hr>
+		<% @activities.each do |activity| %>
+			<% if activity.is_a? Comment %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-comment"></i> </div>
+				<div class="pull-left">
+					commented on <a href="/user/<%= activity.post.user.username %>">@<%= activity.post.user.username %></a>'s article <a href="/posts/<%= activity.post.id %>"><%= activity.post.title %></a>
+					<blockquote><%= activity.comment %></blockquote>
+				</div>
+				<div style="clear:both;"></div>
+			<% elsif activity.is_a? Agree %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-thumbs-up"></i> </div>
+				<div class="pull-left">
+					agreed with <a href="/posts/<%= activity.post.id %>"><%= activity.post.title %></a><p></p>
+				</div>
+				<div style="clear:both;"></div>
+			<% elsif activity.is_a? Post %>
+				<div class="pull-left" style="margin-right:5px;"><i class="icon-pencil"></i> </div>
+				<div class="pull-left">
+					wrote <a href="/posts/<%= activity.id %>"><%= activity.title %></a><p></p>
+				</div>
+				<div style="clear:both;"></div>
+			<% end %>
+		<% end %>
+    </div>
+</div>
+
+
+
+
+</div>
+</div>
