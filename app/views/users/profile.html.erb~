@@ -6,7 +6,7 @@
 <p><%= @user.bio %></p>
 </div>
 
-<% if @agreed.equal?(false) %>
+<% if @isfollowing.equal?(false) %>
 	<%= form_for([@user, @user.relationships.new]) do |f| %>
 	<button type="submit" class="btn pull-right">Follow</button>
 	<% end %>
@@ -15,7 +15,7 @@
 	<button type="submit" class="agreed btn btn-inverse pull-right" onmouseover="change_btn();" onmouseout="change_back();"> Unfollow</button>
 	<% end %>
 <% end %>
-
+<hr>
 <div class="row">
 <div class="span3">
 <div class="tabbable tabs-left pull-right">
