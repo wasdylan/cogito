@@ -5,9 +5,12 @@ class HomeController < ApplicationController
 
 	def stream
 		@feed_items = current_user.feed
-
-		def snippet(thought, wordcount) 
-			thought.split[0..(wordcount-1)].join(" ") +(thought.split.size > wordcount ? "..." : "") 
-		end 
+		
+		@popular = Post.paginate(
+        									  :select => "posts.*, count(*) as agree_total", 
+         									  :joins => joins, 
+         									  :conditions=> conditions, 
+         									  :group => "agrees.post_id", 
+         									  :order => "agree_total DESC")
 	end
 end

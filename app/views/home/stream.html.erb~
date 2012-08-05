@@ -3,8 +3,8 @@
 <h1>Your stream</h1>
 <hr>
 <% @feed_items.each do |post| %>
-	<h2><%= post.title %><small> by <%= post.user.fullname %></small></h2>
-	<p><%= post.content.split[0..(30-1)].join(" ") +(post.content.split.size > 30 ? " ..." : "")  %></p>
+	<h2><a href="/posts/<%= post.id %>"><%= post.title %></a><small> by <%= post.user.fullname %></small></h2>
+	<p><%= post.content.split[0..(100-1)].join(" ") +(post.content.split.size > 100 ? " ..." : "")  %></p>
 	<hr>
 <% end %>
 </div>
@@ -12,5 +12,10 @@
 <div class="span4">
 <h1>Popular</h1>
 <hr>
+<% @popular.each do |post| %>
+	<h2><a href="/posts/<%= post.id %>"><%= post.title %></a><small> by <%= post.user.fullname %></small></h2>
+	<p><%= post.content.split[0..(100-1)].join(" ") +(post.content.split.size > 100 ? " ..." : "")  %></p>
+	<hr>
+<% end %>
 </div>
 </div>

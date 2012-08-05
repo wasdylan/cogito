@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Higherthought" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Cogito" %></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -30,6 +30,9 @@
             </div>
           </div>
           <footer>
+							<p>
+							made with bootstrap, riding on rails, and fueled by coffee.
+							</p>
           </footer>
         </div>
       </div> <!--! end of .container -->

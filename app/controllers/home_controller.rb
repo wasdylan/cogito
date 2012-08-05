@@ -5,5 +5,7 @@ class HomeController < ApplicationController
 
 	def stream
 		@feed_items = current_user.feed
+		
+
 	end
 end

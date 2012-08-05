@@ -7,7 +7,7 @@ function change_btn(){
 function change_back(){
 	$('.agreed').removeClass("btn-danger");
 	$('.agreed').addClass("btn-inverse");
-	$('.agreed').html("<i class='icon-plus icon-white'></i> Agreed");
+	$('.agreed').html("<i class='icon-plus icon-white'></i> Following");
 }
 </script>
 
@@ -76,6 +76,7 @@ function change_back(){
     <div class="tab-pane" id="activity">
     	<h2>Recent Activity</h2><hr>
 		<% @activities.each do |activity| %>
+			<p>
 			<% if activity.is_a? Comment %>
 				<div class="pull-left" style="margin-right:5px;"><i class="icon-comment"></i> </div>
 				<div class="pull-left">
@@ -96,6 +97,7 @@ function change_back(){
 				</div>
 				<div style="clear:both;"></div>
 			<% end %>
+			</p>
 		<% end %>
     </div>
 </div>

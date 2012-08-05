@@ -17,14 +17,3 @@
 //= require_tree .
 //= require wysihtml5
 //= require bootstrap-wysihtml5
-//= require jquery.masonry.min
-
-$(function(){
-$('#articles').masonry({
-  itemSelector: '.article',
-  // set columnWidth a fraction of the container width
-  columnWidth: function( containerWidth ) {
-    return containerWidth / 3;
-  }
-});
-});
