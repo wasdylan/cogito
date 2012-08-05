@@ -17,3 +17,4 @@
 //= require_tree .
 //= require wysihtml5
 //= require bootstrap-wysihtml5
+//= require jquery.masonry.min

@@ -3,5 +3,8 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => exception.message
   end
+		def snippet(thought, wordcount) 
+		thought.split[0..(wordcount-1)].join(" ") +(thought.split.size > wordcount ? "..." : "") 
+	end 
 
 end

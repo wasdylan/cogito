@@ -5,5 +5,9 @@ class HomeController < ApplicationController
 
 	def stream
 		@feed_items = current_user.feed
+
+		def snippet(thought, wordcount) 
+			thought.split[0..(wordcount-1)].join(" ") +(thought.split.size > wordcount ? "..." : "") 
+		end 
 	end
 end

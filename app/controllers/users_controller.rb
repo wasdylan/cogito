@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @agrees = Agree.where(:user_id => @user.id) # get all the users agreements for the activity stream
 	  @activities = (@posts + @comments + @agrees).sort_by(&:created_at) # combine user's activities and sort them for the stream
 	  @activites = @activities.reverse!
-	  @posts = @posts.reverse!
 
 		@following = Relationship.where(:follower_id => @user.id)
     @following_count = @following.count
