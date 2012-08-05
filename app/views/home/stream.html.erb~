@@ -1,3 +1,6 @@
-<% @posts.each do |activity| %>
-				<%= activity %>
-		<% end %>
+<h1>Home#stream</h1>
+<p>Find me in app/views/home/stream.html.erb</p>
+
+<% @feed_items.each do |post| %>
+	<%= post.title %> by <%= post.user.fullname %>
+<% end %>

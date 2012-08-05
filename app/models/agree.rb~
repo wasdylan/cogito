@@ -4,7 +4,5 @@ class Agree < ActiveRecord::Base
   belongs_to :user
   belongs_to :post
 
-	fires :new_agree, :on                 => :create,
-                    :actor              => :user,
-										:subject						=> :post
+	default_scope :order => 'agrees.created_at DESC'
 end
