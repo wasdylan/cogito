@@ -1,5 +1,5 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
+<div class="subnav subnav-fixed">
+  <div class="subnav">
     <div class="container">
     
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -33,7 +33,7 @@
       
       
       <div class="nav-collapse">
-        <ul class="nav">
+        <ul class="nav pull-right">
           <li><%= link_to('Articles', posts_path) %></li>
           <% if user_signed_in? %>
           <li><a href="">Bookmarked</a></li>

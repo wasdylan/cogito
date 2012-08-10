@@ -1,6 +1,4 @@
-<div class="page-header">
-  <h1>Home</h1>
-</div>
+<h3>Home</h3>
 <% @users.each do |user| %>
   <p>User: <%=link_to user.name, user %></p>
 <% end %>

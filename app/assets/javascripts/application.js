@@ -17,3 +17,11 @@
 //= require_tree .
 //= require wysihtml5
 //= require bootstrap-wysihtml5
+//= require jquery.masonry.min.js
+
+$(function(){
+  $('#items').masonry({
+    // options
+    itemSelector : '.item'
+  });
+});

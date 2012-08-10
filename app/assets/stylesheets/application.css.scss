@@ -13,6 +13,18 @@
  *= require bootstrap-wysihtml5
 */
 
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
 .article p {
 	font-size: 1em;
 	line-height: 1.25em;
@@ -47,5 +59,17 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #333333;
-  background-color: #ffffff;
+  background-image: url("/assets/download.png");
+}
+
+.navbar {
+	border-bottom: 2px solid white;
+}
+
+h1, h2, h3, h4 a:link, a:visited {
+	color:black;
+}
+
+h1, h2, h3, h4 a:link {
+	color:black;
 }

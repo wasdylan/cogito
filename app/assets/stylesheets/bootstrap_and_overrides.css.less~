@@ -31,3 +31,14 @@ body {
 //
 // Example:
 // @linkColor: #ff0000;
+
+@navbarBackground: @white;
+@navbarBackgroundHighlight: @white;
+@navbarLinkColor: @black;
+@navbarLinkColorHover: @blue;
+@navbarBrandColor: @black;
+@headingsColor: @black;
+
+.navbar .nav > li > a {
+	text-shadow: nonel
+}
