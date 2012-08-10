@@ -11,6 +11,11 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
+		<style type="text/css">
+			body {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+		</style>
   </head>
   <body>
     <header class="navbar navbar-fixed-top">
