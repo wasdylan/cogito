@@ -5,12 +5,7 @@ class HomeController < ApplicationController
 
 	def stream
 		@feed_items = current_user.feed
-		
-		@popular = Post.paginate(
-        									  :select => "posts.*, count(*) as agree_total", 
-         									  :joins => joins, 
-         									  :conditions=> conditions, 
-         									  :group => "agrees.post_id", 
-         									  :order => "agree_total DESC")
+
+		@popular = Like.popular
 	end
 end

@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
 	def stream
 		@feed_items = current_user.feed
-		
 
+		@popular = Agree.popular
 	end
 end

@@ -40,5 +40,5 @@ body {
 @headingsColor: @black;
 
 .navbar .nav > li > a {
-	text-shadow: nonel
+	text-shadow: none;
 }

@@ -7,7 +7,7 @@
 
 <div class="row" id="items">
 <% @feed_items.each do |post| %>
-	<div class="span4">
+	<div class="span4 item">
 	<h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
 	<p><%= post.content.split[0..(50-1)].join(" ") +(post.content.split.size > 50 ? " ..." : "")  %></p>
 	<hr>
@@ -21,6 +21,27 @@
 <div class="page-header">
   <h1>Popular <small>hot stuff</small></h1>
 </div>
+
+
+<div class="row">
+<div class="span4">
+<h2><a href="/posts/<%= @popular[0].post.id %>"><%= @popular[0].post.title %></a></h2>
+<p><%= @popular[0].post.content.split[0..(50-1)].join(" ") +(@popular[0].post.content.split.size > 50 ? " ..." : "")  %></p>
+<hr>
+</div>
+</div>
+
+<div class="row">
+<div class="span2">
+<h2><a href="/posts/<%= @popular[1].post.id %>"><%= @popular[1].post.title %></a></h2>
+<p><%= @popular[1].post.content.split[0..(25-1)].join(" ") +(@popular[1].post.content.split.size > 25 ? " ..." : "")  %></p>
+</div>
+
+</div>
+
+
+
+
 
 </div>
 </div>
