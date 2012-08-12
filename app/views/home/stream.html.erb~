@@ -23,20 +23,14 @@
 </div>
 
 
-<div class="row">
-<div class="span4">
-<h2><a href="/posts/<%= @popular[0].post.id %>"><%= @popular[0].post.title %></a></h2>
-<p><%= @popular[0].post.content.split[0..(50-1)].join(" ") +(@popular[0].post.content.split.size > 50 ? " ..." : "")  %></p>
-<hr>
-</div>
-</div>
-
-<div class="row">
-<div class="span2">
-<h2><a href="/posts/<%= @popular[1].post.id %>"><%= @popular[1].post.title %></a></h2>
-<p><%= @popular[1].post.content.split[0..(25-1)].join(" ") +(@popular[1].post.content.split.size > 25 ? " ..." : "")  %></p>
-</div>
-
+<div class="row" id="items">
+<% @popular.each do |post| %>
+	<div class="span4 item">
+	<h2><a href="/posts/<%= post.post.id %>"><%= post.post.title %></a></h2>
+	<p><%= post.post.content.split[0..(50-1)].join(" ") +(post.post.content.split.size > 50 ? " ..." : "")  %></p>
+	<hr>
+	</div>
+<% end %>
 </div>
 
 
